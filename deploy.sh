@@ -1,8 +1,8 @@
-make bundle-build BUNDLE_IMG=quay.io/rwsu/assisted-service-operator-bundle:0.0.1
-podman push quay.io/rwsu/assisted-service-operator-bundle:0.0.1
+make bundle-build BUNDLE_IMG=quay.io/ccrum/assisted-service-operator-bundle:0.0.1
+podman push quay.io/ccrum/assisted-service-operator-bundle:0.0.1
 
-opm index add --bundles quay.io/rwsu/assisted-service-operator-bundle:0.0.1 --tag quay.io/rwsu/rwsu-assisted-service-index:0.0.1
-podman push quay.io/rwsu/rwsu-assisted-service-index:0.0.1
+opm index add --bundles quay.io/ccrum/assisted-service-operator-bundle:0.0.1 --tag quay.io/ccrum/ccrum-assisted-service-index:0.0.1
+podman push quay.io/ccrum/ccrum-assisted-service-index:0.0.1
 
 oc apply -f namespace.yaml
 oc apply -f postgres-pvc.yaml
